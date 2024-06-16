@@ -253,7 +253,7 @@ body {
 
 
 /* NAVBAR */
-#content nav {
+#content nav  {
 	height: 56px;
 	background: var(--light);
 	padding: 0 24px;

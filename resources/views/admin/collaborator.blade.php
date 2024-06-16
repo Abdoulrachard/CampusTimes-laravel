@@ -1,10 +1,10 @@
 @extends('base.base')
- @section('title') Les proffesseurs @endsection
+ @section('title') Les collaborateurs @endsection
 
  @section('content') 
  <div class="d-flex justify-content-between mb-2 align-items-center">
-    <h5 class="text-center">Les proffesseurs</h5>
-    <a class='btn btn-primary text-center shadow' href="{{ route('teacher.create') }}">Ajouter</a>
+    <h5 class="text-center">Les collaborateurs</h5>
+    <a class='btn btn-primary text-center shadow' href="{{ route('collaborator.create') }}">Ajouter</a>
  </div>
    <table class="table table-striped">
         <thead>
@@ -18,19 +18,19 @@
             </tr>
         </thead>
         <tbody>
-                {{-- @dd($teachers) --}}
-                @foreach ($teachers as $teacher)
+                {{-- @dd($collaborators) --}}
+                @foreach ($collaborators as $collaborator)
                 <tr>
-                <td><img src="{{ $teacher->profil() }}" alt="" style="width: width: 36px;height: 36px;object-fit: cover;border-radius: 50%; "></td>
-                <td>{{ $teacher->lastname }}</td>
-                <td>{{ $teacher->firstname }}</td>
-                <td>{{ $teacher->phone }}</td>
-                <td>{{ $teacher->email }}</td>
+                <td><img src="{{ $collaborator->profil() }}" alt="" style="width: width: 36px;height: 36px;object-fit: cover;border-radius: 50%; "></td>
+                <td>{{ $collaborator->lastname }}</td>
+                <td>{{ $collaborator->firstname }}</td>
+                <td>{{ $collaborator->phone }}</td>
+                <td>{{ $collaborator->email }}</td>
                 <td>
                     <div class="d-flex justify-content-end w-100 gap-1 ">
-                        <a href="{{ route('teacher.edit', $teacher) }}" class="btn btn-primary rounded-1 text-light"><i class="bx bx-edit" style="font-size:16px;"></i></a>
+                        <a href="{{ route('collaborator.edit', $collaborator) }}" class="btn btn-primary rounded-1 text-light"><i class="bx bx-edit" style="font-size:16px;"></i></a>
                         <div>
-                            <form action="{{ route('teacher.destroy', $teacher) }}" method="post">
+                            <form action="{{ route('collaborator.destroy', $collaborator) }}" method="post">
                                 @method('delete')
                                 @csrf
                                 <button class="btn btn-danger rounded-1"><i class="bx bx-trash" style="font-size:16px;"></i></button>
@@ -43,6 +43,6 @@
             
         </tbody>
    </table>
-   {{ $teachers->links()}}
+   {{ $collaborators->links()}}
 
  @endsection

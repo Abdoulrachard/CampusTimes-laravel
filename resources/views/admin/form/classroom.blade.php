@@ -47,7 +47,7 @@
                     <label for="" class="form-check-label " > Disponible ou non </label>
                 </div>
             <div class="">
-                <button class="btn btn-primary  mt-4">
+                <button class="btn btn-primary shadow mt-4">
                     @if ($classroom->exists)
                         Modifier   
                     @else

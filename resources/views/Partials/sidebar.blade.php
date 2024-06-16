@@ -19,8 +19,8 @@ $route = Route::currentRouteName()
 				<span class="text">Emplois du Temps</span>
 			</a>
 		</li>
-		<li @class(['', 'active' => str_starts_with($route , 'collaborateur.')])>
-			<a href="#">
+		<li @class(['', 'active' => str_starts_with($route , 'collaborator.')])>
+			<a href="{{ route('collaborator.index') }}">
 				<i class='bx bxs-user-account' ></i>
 				<span class="text">Collaborateurs</span>
 			</a>
@@ -33,7 +33,7 @@ $route = Route::currentRouteName()
 		</li>
 		
 		<li @class(['', 'active' => str_starts_with($route , 'student.')])>
-			<a href="#">
+			<a href="{{ route('student.index') }}">
 				<i class='bx bxs-group' ></i>
 				<span class="text">Etudiants</span>
 			</a>

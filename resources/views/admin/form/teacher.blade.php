@@ -52,7 +52,7 @@
             </div>
         </div>
             <div class="">
-                <button class="btn btn-primary  mt-2">
+                <button class="btn btn-primary shadow mt-2">
                     @if ($teacher->exists)
                         Modifier   
                     @else

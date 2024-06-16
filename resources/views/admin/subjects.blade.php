@@ -4,7 +4,7 @@
  @section('content') 
  <div class="d-flex justify-content-between mb-2 align-items-center">
     <h5 class="text-center">Les matières</h5>
-    <a class='btn btn-primary text-center' href="{{ route('subject.create') }}">Ajouter</a>
+    <a class='btn btn-primary text-center shadow' href="{{ route('subject.create') }}">Ajouter</a>
  </div>
    <table class="table table-striped">
         <thead>

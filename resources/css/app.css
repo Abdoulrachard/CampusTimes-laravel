@@ -50,6 +50,7 @@
 .logouac{
 	width: 40px;
 	height: 40px;
+	border-radius: 50%; 
 }
 .fw-medium{
 	line-height: 2.5rem;

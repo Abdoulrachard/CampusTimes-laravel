@@ -39,7 +39,7 @@
                     </div>
 
                     <button class="btn btn-custom w-100 mt-3 shadow">Se connecter</button>
-                    <div class="d-flex justify-content-between mt-3">
+                    <div class="d-flex span-custom justify-content-between mt-3">
                         <span class="form-check">
                             <input type="checkbox" name="remenber" id="" class=" form-check-input">
                             <label for="" class="form-check-label text-muted">Se souvenir de moi</label>

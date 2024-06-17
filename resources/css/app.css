@@ -621,18 +621,21 @@ body {
 		font-size: 1.1rem !important;
 	}
 	.entete span{
-		font-size: 0.8rem;
+		font-size: 0.9rem;
+	}
+	.span-custom span{
+		font-size: 0.8rem !important;
 	}
 	.entete h4{
-		font-size: 1rem;
+		font-size: 1.1rem;
 	}
 	.position-custom-2{
 		top:45% ;
-		left: 85%;
+		left: 87%;
 	}
 	.position-custom{
 		top:45% ;
-		left: 85%;
+		left: 87%;
 	}
 	.custom-p{
 		padding: 2rem !important;

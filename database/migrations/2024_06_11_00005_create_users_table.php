@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('lastname');
             $table->string('email')->unique();
             $table->string('phone')->unique();
-            $table->string('profil')->nullable();
+            $table->string('profil')->default('default.svg')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->ForeignIdFor(Role::class)->default(3)->constrained()->cascadeOnDelete();

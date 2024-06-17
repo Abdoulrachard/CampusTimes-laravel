@@ -1,4 +1,4 @@
-@extends('base.baseRl')
+@extends('Base.baseRl')
 @section('title') Connexion @endsection
 
 @section('content')

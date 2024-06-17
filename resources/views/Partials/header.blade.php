@@ -14,7 +14,7 @@
 	</a>
 	<div style="" class="profil-container d-flex align-items-center mx-1   " >
 		<a href="#" class="profile" style="margin-right:15px;">
-			<img src="{{ Auth::user()->firstname }}" alt="">
+			<img src="{{ Auth::user()->profil() }}" alt="">
 		</a>
 		<div class="profil-info d-flex " style="flex-direction:column">
 			<form action="{{ route('auth.logout')}}" method="POST"id="disconnect" style="display: none">

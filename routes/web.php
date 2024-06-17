@@ -39,7 +39,7 @@ Route::resource('classroom',ClassroomController::class)->except('show');
 Route::resource('timetable',TimetableController::class)->except('show');
 Route::resource('teacher',TeacherController::class)->except('show');
 Route::resource('collaborator',CollaboratorController::class)->except('show');
-Route::get('student',[CollaboratorController::class,'index']);
+Route::get('student',[CollaboratorController::class,'index'])->name('student.index');
 Route::post('student',[CollaboratorController::class,'blocked']);
 Route::view('/dashboard' , 'admin.dashboard')->name('admin.dashboard') ;
 });

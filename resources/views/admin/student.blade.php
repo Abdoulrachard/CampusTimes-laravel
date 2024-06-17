@@ -2,9 +2,8 @@
  @section('title') Les étudiants @endsection
 
  @section('content') 
- <div class="d-flex justify-content-between mb-2 align-items-center">
-    <h5 class="text-center">Les étudiants</h5>
- </div>
+ <div class="margin-update">
+ <div class="table-responsive">
    <table class="table table-striped">
         <thead>
             <tr>
@@ -45,6 +44,6 @@
             
         </tbody>
    </table>
+ </div>
    {{ $students->links()}}
-
  @endsection

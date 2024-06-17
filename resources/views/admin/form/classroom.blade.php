@@ -1,7 +1,7 @@
 @extends('Base.base')
 @section('title', $classroom->exists ? "Modifier une salle de classe" : "Créer une salle de classe") 
 @section('content')
-    <form action="{{ route($classroom->exists ? 'classroom.update' : 'classroom.store' , $classroom) }}" method="post" class="p-4">
+    <form action="{{ route($classroom->exists ? 'classroom.update' : 'classroom.store' , $classroom) }}" method="post" class="p-4 margin-update">
         @method($classroom->exists ? 'PATCH' : 'POST')
         @csrf
         <h5 class="">

@@ -1,7 +1,7 @@
 @extends('Base.base')
 @section('title', $collaborator->exists ? "Modifier un collaborateur" : "Créer un collaborateur") 
 @section('content')
-    <form action="{{ route($collaborator->exists ? 'collaborator.update' : 'collaborator.store' , $collaborator) }}" method="post" class="p-4">
+    <form action="{{ route($collaborator->exists ? 'collaborator.update' : 'collaborator.store' , $collaborator) }}" method="post" class="p-4 margin-update">
         @method($collaborator->exists ? 'PATCH' : 'POST')
         @csrf
         <h5 class="">

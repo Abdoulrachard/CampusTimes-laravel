@@ -2,11 +2,11 @@
  @section('title') Les niveaux @endsection
 
  @section('content') 
-
- <div class="d-flex justify-content-between mb-2 align-items-center">
-    <h5 class="text-center">Les niveaux</h5>
+<div class="margin-update">
+ <div class="d-flex justify-content-end mb-2 align-items-center">
     <a class='btn btn-primary text-center shadow' href="{{ route('level.create') }}">Ajouter</a>
  </div>
+ <div class="table-responsive">
    <table class="table table-striped">
         <thead>
             <tr>
@@ -39,7 +39,9 @@
         </tbody>
 
    </table>
+ </div>
    <div class="text-center">
    {{ $levels->links()}}
  </div>
+</div>
  @endsection

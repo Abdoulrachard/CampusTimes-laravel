@@ -1,7 +1,24 @@
+@php
+    use Illuminate\Support\Facades\Route;
+    $route = Route::currentRouteName();
+@endphp
 <div class="head-title">
-  
     <div class="left">
-        <h5>Mon compte</h5>
+        @if (str_starts_with($route, 'admin.dash'))
+        <h5>Dashboard</h5>
+    @elseif (str_starts_with($route, 'level.'))
+        <h5>Niveaux</h5>
+    @elseif (str_starts_with($route, 'student.'))
+        <h5>Etudiants</h5>
+    @elseif (str_starts_with($route, 'teacher.'))
+        <h5>Professeurs</h5>
+    @elseif (str_starts_with($route, 'collaborator.'))
+        <h5>Collaborateurs</h5>
+    @elseif (str_starts_with($route, 'subject'))
+        <h5>Matières</h5>
+    @elseif (str_starts_with($route , 'classroom.'))
+        <h5>Salles de classe</h5>
+    @endif
         
     </div>
     {{-- <a href="#" class="btn-download">
@@ -10,15 +27,15 @@
     </a> --}}
     <ul class="breadcrumb">
         <li>
-            <a href="#" class="">Dashboard</a>
+            <a href="#" class="">Home</a>
         </li>
         <li> <i class='bx bx-chevron-right' ></i> </li>
         <li>
-            <a class="active" href="#">Home</a>
+            <a class="active" href="#">Dashboard</a>
         </li>
     </ul>
 </div>
-
+@if ( $route === "admin.dashboard")
 <ul class="box-info">
     <li>
         <i class='bx bxs-calendar-check' ></i>
@@ -42,8 +59,7 @@
         </span>
     </li>
 </ul>
-
-
+@endif
 {{-- <div class="table-data">
     <div class="order">
         <div class="head">

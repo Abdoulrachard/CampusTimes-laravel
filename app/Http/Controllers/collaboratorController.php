@@ -16,7 +16,7 @@ class CollaboratorController extends Controller
         $collaborators = User::query() ;
         $collaborators->where('role_id', '=', 1);
         $collaborators = $collaborators->paginate(5);
-        return view('admin.collaborator',[ 'collaborators' =>   $collaborators] );
+        return view('admin.collaborator',[ 'collaborators' =>   $collaborators] ) ;
     }
     public function create()
     {

@@ -23,10 +23,11 @@ class LoginController extends Controller
         {
             session()->regenerate() ;
             $user = Auth::user() ;
-            if($user->role_id === 1 || $user->role_id === 2){
+            if($user->role_id === 1 ){
                 return redirect()->intended(RouteServiceProvider::HOME) ;
+            }else{
+                return redirect()->intended(RouteServiceProvider::STUDENT) ;
             }
-            return redirect()->intended(RouteServiceProvider::STUDENT) ;
         } 
         return  back()->withErrors(
             [ 'email' =>  "Les identifiants sont incorrectes"] 

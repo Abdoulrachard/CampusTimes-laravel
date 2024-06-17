@@ -8,7 +8,7 @@
                 <img src="{{ asset('/storage/image/cover.jpg') }}" class="cover_login" alt="">
             </div>
             <div class="col-md-6  p-none">
-                <form action="" method="post" class="p-5 bg-white h-100">
+                <form action="" method="post" class="p-5 custom-p bg-white h-100">
                     @csrf
                     <div class="d-flex justify-content-center align-items-center">
                         <div class="img"><img src="{{ asset('/storage/image/logouac.png') }}" class="logouac"

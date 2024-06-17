@@ -1,4 +1,4 @@
-@extends('base.base')
+@extends('Base.base')
 @section('title', $collaborator->exists ? "Modifier un collaborateur" : "Créer un collaborateur") 
 @section('content')
     <form action="{{ route($collaborator->exists ? 'collaborator.update' : 'collaborator.store' , $collaborator) }}" method="post" class="p-4">

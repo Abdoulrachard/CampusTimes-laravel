@@ -1,4 +1,4 @@
-@extends('base.base')
+@extends('Base.base')
 @section('title', $subject->exists ? "Modifier une matière" : "Créer un matière") 
 @section('content')
     <form action="{{ route($subject->exists ? 'subject.update' : 'subject.store' , $subject) }}" method="post" class="p-4">

@@ -1,4 +1,4 @@
-@extends('base.base')
+@extends('Base.base')
  @section('title') Les matières @endsection
 
  @section('content') 

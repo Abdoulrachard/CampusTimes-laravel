@@ -17,7 +17,7 @@ class RegisterController extends Controller
 {
     public function create()
     {
-        return view('auth.register' , ['levels' => Level::all()]);
+        return view('Auth.register' , ['levels' => Level::all()]);
     }
     public function store(RegisterRequest $request)
     {

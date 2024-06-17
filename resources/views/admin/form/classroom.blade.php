@@ -1,4 +1,4 @@
-@extends('base.base')
+@extends('Base.base')
 @section('title', $classroom->exists ? "Modifier une salle de classe" : "Créer une salle de classe") 
 @section('content')
     <form action="{{ route($classroom->exists ? 'classroom.update' : 'classroom.store' , $classroom) }}" method="post" class="p-4">

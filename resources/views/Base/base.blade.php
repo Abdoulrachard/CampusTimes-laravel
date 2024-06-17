@@ -12,15 +12,15 @@
 </head>
 <body>
     <div id="app">
-            @include('partials.sidebar')
+            @include('Partials.sidebar')
         <section id="content">
-                @include('partials.header')
+                @include('Partials.header')
                 <main>
-                @include('partials.main')
+                @include('Partials.main')
                 </main>
         </section>
         <footer>
-            @include('partials.footer')
+            @include('Partials.footer')
         </footer>
     </div>    
     <script src="http://localhost/bootstrap/dist/js/bootstrap.bundle.js"></script>

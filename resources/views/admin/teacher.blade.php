@@ -1,4 +1,4 @@
-@extends('base.base')
+@extends('Base.base')
  @section('title') Les proffesseurs @endsection
 
  @section('content') 

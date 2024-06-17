@@ -1,4 +1,4 @@
-@extends('base.base')
+@extends('Base.base')
 @section('title', $level->exists ? "Modifier un niveau" : "Créer un niveau") 
 @section('content')
     <form action="{{ route($level->exists ? 'level.update' : 'level.store' , $level) }}" method="post" class="p-4">

@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('profil')->default('default.svg')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->boolean('blocked')->default(false);
             $table->ForeignIdFor(Role::class)->default(3)->constrained()->cascadeOnDelete();
             $table->ForeignIdFor(Level::class)->nullable()->constrained()->cascadeOnDelete();
             $table->rememberToken();

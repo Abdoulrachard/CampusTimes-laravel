@@ -1,6 +1,15 @@
 @php
+use App\Models\User;
+use App\Models\Subject;
+use App\Models\Classroom;
+
     use Illuminate\Support\Facades\Route;
     $route = Route::currentRouteName();
+    $total_students = User::query()->where('role_id', 3)->count();
+    $total_teachers = User::query()->where('role_id', 2)->count();
+    $total_subjects = Subject::all()->count();
+    $total_classrooms = Classroom::all()->count();
+
 @endphp
 <div class="head-title">
     <div class="left">
@@ -52,29 +61,65 @@
     </ul>
 </div>
 @if ( $route === "admin.dashboard")
-<ul class="box-info">
-    <li>
-        <i class='bx bxs-calendar-check' ></i>
-        <span class="text">
-            <h3>1020</h3>
-            <p>New Order</p>
-        </span>
-    </li>
-    <li>
-        <i class='bx bxs-group' ></i>
-        <span class="text">
-            <h3>2834</h3>
-            <p>Visitors</p>
-        </span>
-    </li>
-    <li>
-        <i class='bx bxs-dollar-circle' ></i>
-        <span class="text">
-            <h3>$2543</h3>
-            <p>Total Sales</p>
-        </span>
-    </li>
-</ul>
+<div class="my-3 d-grid grid-2 grid-lg-4 gap-2">
+    <div class="card col border border-1 rounded-3 p-3 container-fluid shadow-sm border-0 animate__animated animate__fadeInDown">
+        <div class="row row-cols-2 justify-content-between">
+            <div class="info align-self-center">
+                <h6 class="text-muted">Etudiants</h6>
+                <h5>{{ $total_students }}</h5>
+            </div>
+            <div>
+                <div class="card-img p-2 text-center">
+                    <img src="{{ asset('storage/image/dash-icon-01.svg')}}" alt="student">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card col border border-1 rounded-3 p-3 container-fluid shadow-sm border-0 animate__animated animate__fadeInUp">
+        <div class="row row-cols-2 justify-content-between">
+            <div class="info align-self-center">
+                <h6 class="text-muted">Professeurs</h6>
+                <h5>{{ $total_teachers }}</h5>
+            </div>
+            <div>
+                <div class="card-img p-2 text-center">
+                    <img src="{{ asset('storage/image/default.svg')}}" alt="student">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card col border border-1 rounded-3 p-3 container-fluid shadow-sm border-0 animate__animated animate__fadeInDown">
+        <div class="row row-cols-2 justify-content-between">
+            <div class="info align-self-center">
+                <h6 class="text-muted">Cours</h6>
+                <h5>{{ $total_subjects }}</h5>
+            </div>
+            <div>
+                <div class="card-img p-2 text-center">
+                    <img src="{{ asset('storage/image/books.svg')}}" alt="student">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card col border border-1 rounded-3 p-3 container-fluid shadow-sm border-0 animate__animated animate__fadeInUp">
+        <div class="row row-cols-2 justify-content-between">
+            <div class="info align-self-center">
+                <h6 class="text-muted">Salles</h6>
+                <h5>{{ $total_classrooms }}</h5>
+            </div>
+            <div>
+                <div class="card-img p-2 text-center">
+                    <img src="{{  asset('storage/image/dash-icon-03.svg')}}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="graph row mt-5">
+    <div class="bg-white col col-12 col-lg-12 p-3 rounded-3 shadow-sm">
+        <h5 class="text-muted">Statistique</h5>
+        <canvas id="graph-viewer"></canvas>
+    </div>
 @endif
 {{-- <div class="table-data">
     <div class="order">

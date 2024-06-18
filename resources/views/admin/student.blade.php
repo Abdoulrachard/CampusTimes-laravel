@@ -27,13 +27,13 @@
                 <td>
                     <div class="d-flex justify-content-center align-items-center w-100 gap-1 ">
                         <div>
-                            <form action="{{ route('student.blocked', $students) }}" method="post">
+                            <form action="{{ route('student.blocked', $student) }}" method="post">
                                 @csrf
                                 
                                 @if ($student->blocked)
-                                <button class="btn btn-danger rounded-1">Unlock <i class="bx bxs"></i></button>
+                                <button class="btn btn-danger rounded-1"><i class="bx bxs-lock "></i></button>
                                 @else
-                                <button class="btn btn-primary">Lock</button>
+                                <button class="btn btn-primary"><i class="bx  bxs-lock-open"></i></button>
                                 @endif
                             </form>
                         </div>

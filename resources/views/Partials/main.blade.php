@@ -5,19 +5,19 @@
 <div class="head-title">
     <div class="left">
         @if (str_starts_with($route, 'admin.dash'))
-        <h5>Dashboard</h5>
+        <h4>Dashboard</h4>
     @elseif (str_starts_with($route, 'level.'))
-        <h5>Niveaux</h5>
+        <h4>Niveaux</h4>
     @elseif (str_starts_with($route, 'student.'))
-        <h5>Etudiants</h5>
+        <h4>Etudiants</h4>
     @elseif (str_starts_with($route, 'teacher.'))
-        <h5>Professeurs</h5>
+        <h4>Professeurs</h4>
     @elseif (str_starts_with($route, 'collaborator.'))
-        <h5>Collaborateurs</h5>
+        <h4>Collaborateurs</h4>
     @elseif (str_starts_with($route, 'subject'))
-        <h5>Matières</h5>
+        <h4>Matières</h4>
     @elseif (str_starts_with($route , 'classroom.'))
-        <h5>Salles de classe</h5>
+        <h4>Salles de classe</h4>
     @endif
         
     </div>
@@ -27,11 +27,27 @@
     </a> --}}
     <ul class="breadcrumb">
         <li>
-            <a href="#" class="">Home</a>
+            <a href="/admin/dashboard" class="text-black">Home</a>
         </li>
-        <li> <i class='bx bx-chevron-right' ></i> </li>
+        <li> <span class="mx-1">/</span> </li>
         <li>
-            <a class="active" href="#">Dashboard</a>
+    @if (str_starts_with($route, 'admin.dash'))
+        <a class="text-black">Dashboard</a>
+    @elseif (str_starts_with($route, 'level.'))
+        <a class="text-black">Niveaux</a>
+    @elseif (str_starts_with($route, 'student.'))
+        <a class="text-black">Etudiants</a>
+    @elseif (str_starts_with($route, 'teacher.'))
+        <a class="text-black">Professeurs</a>
+    @elseif (str_starts_with($route, 'collaborator.'))
+        <a class="text-black">Collaborateurs</a>
+    @elseif (str_starts_with($route, 'subject'))
+        <a class="text-black">Matières</a>
+    @elseif (str_starts_with($route , 'classroom.'))
+        <a class="text-black">Salles de classe</a>
+    @endif
+    
+
         </li>
     </ul>
 </div>
@@ -149,6 +165,6 @@
         </ul>
     </div>
 </div> --}}
-<div class="p-4">
+<div class="p-1">
     @yield('content')
 </div>

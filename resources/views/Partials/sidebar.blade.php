@@ -3,8 +3,8 @@ $route = Route::currentRouteName()
 @endphp
 <section id="sidebar">
 	<a href="#" class="brand">
-		<i class='bx bxs-smile'></i>
-		<span class="text">Timetable</span>
+		<img src="{{ asset('/storage/image/logouac.png')}}" alt="" style="width: 30px;height:30px;border-raduis:20px ;">
+		<span class="text">Campustimes</span>
 	</a>
 	<ul class="side-menu top">
 		<li @class(['', 'active' => str_starts_with($route , 'admin.dash')])>

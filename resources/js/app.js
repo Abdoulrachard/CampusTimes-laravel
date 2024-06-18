@@ -11,7 +11,39 @@ allSideMenu.forEach(item=> {
 	})
 });
 
+/*datatable initiation */
+var langueOptions = {
+    "sEmptyTable":     "Aucune donnée disponible dans le tableau",
+    "sInfo":           "Affichage de  _START_ à _END_ sur _TOTAL_ ",
+    "sInfoEmpty":      "Affichage de  0 à 0 sur 0 entrées",
+    "sInfoFiltered":   "(filtré à partir de _MAX_  au total)",
+    "sInfoPostFix":    "",
+    "sInfoThousands":  ",",
+    "sLengthMenu":     "Afficher _MENU_ éléments",
+    "sLoadingRecords": "Chargement...",
+    "sProcessing":     "Traitement...",
+    "sSearch":         "Rechercher :",
+    "sZeroRecords":    "Aucun résultat trouvé",
+    "oPaginate": {
+        "sNext":     "Suivant",
+        "sPrevious": "Précédent"
+    },
+    "oAria": {
+        "sSortAscending":  ": activer pour trier la colonne par ordre croissant",
+        "sSortDescending": ": activer pour trier la colonne par ordre décroissant"
+    },
+    "select": {
+        "rows": {
+            "_": "%d lignes sélectionnées",
+            "0": "Aucune ligne sélectionnée",
+            "1": "1 ligne sélectionnée"
+        }
+    }
+};
+let table = new DataTable('#myTable',{
+	language: langueOptions,
 
+});
 
 
 // TOGGLE SIDEBAR

@@ -4,15 +4,15 @@
  @section('content') 
  <div class="margin-update">
  <div class="table-responsive">
-   <table class="table table-striped">
-        <thead>
+    <table class="table table-striped shadow-sm " id="myTable">
+        <thead class="bg-white">
             <tr>
                 <th>Profile</th>
                 <th>Nom</th>
                 <th>Prénom(s)</th>
                 <th>Phone</th>
                 <th>Email</th>
-                <th class="text-end">Actions</th>
+                <th class="">Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -25,7 +25,7 @@
                 <td>{{ $student->phone }}</td>
                 <td>{{ $student->email }}</td>
                 <td>
-                    <div class="d-flex justify-content-end w-100 gap-1 ">
+                    <div class="d-flex justify-content-center align-items-center w-100 gap-1 ">
                         <div>
                             <form action="{{ route('student.blocked', $students) }}" method="post">
                                 @csrf

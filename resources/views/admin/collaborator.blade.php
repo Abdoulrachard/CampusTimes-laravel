@@ -7,15 +7,15 @@
     <a class='btn btn-primary text-center shadow' href="{{ route('collaborator.create') }}">Ajouter</a>
  </div>
  <div class="table-responsive">
-   <table class="table table-striped">
-        <thead>
+   <table class="table table-striped shadow-sm " id="myTable">
+        <thead class="bg-white ">
             <tr>
-                <th>Profile</th>
-                <th>Nom</th>
+                <th class="text-center">Profile</th>
+                <th >Nom</th>
                 <th>Prénom(s)</th>
                 <th>Phone</th>
                 <th>Email</th>
-                <th class="text-end">Actions</th>
+                <th class="">Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -28,13 +28,13 @@
                 <td>{{ $collaborator->phone }}</td>
                 <td>{{ $collaborator->email }}</td>
                 <td>
-                    <div class="d-flex justify-content-end w-100 gap-1 ">
-                        <a href="{{ route('collaborator.edit', $collaborator) }}" class="btn btn-primary rounded-1 text-light"><i class="bx bx-edit" style="font-size:16px;"></i></a>
+                    <div class="d-flex justify-content-center align-items-center gap-1 ">
+                        <a href="{{ route('collaborator.edit', $collaborator) }}" class="btn btn-primary rounded-1 text-light btn-action"><i class="bx bx-edit" style=""></i></a>
                         <div>
                             <form action="{{ route('collaborator.destroy', $collaborator) }}" method="post">
                                 @method('delete')
                                 @csrf
-                                <button class="btn btn-danger rounded-1"><i class="bx bx-trash" style="font-size:16px;"></i></button>
+                                <button class="btn btn-danger rounded-1 btn-action"><i class="bx bx-trash" style=""></i></button>
                             </form>
                         </div>
                     </div>

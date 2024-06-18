@@ -7,15 +7,15 @@
     <a class='btn btn-primary text-center shadow' href="{{ route('classroom.create') }}">Ajouter</a>
  </div>
  <div class="table-responsive">
-   <table class="table table-striped">
-        <thead>
+    <table class="table table-striped shadow-sm " id="myTable">
+        <thead class="bg-white text-center">
             <tr>
                 <th>id</th>
                 <th>Labels</th>
                 <th>Capacité</th>
                 <th>Status</th>
                 <th>Description</th>
-                <th class="text-end">Actions</th>
+                <th class="">Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -34,13 +34,13 @@
                 </td>
                 <td >{{ $classroom->description }}</td>
                 <td>
-                    <div class="d-flex justify-content-end w-100 gap-1 ">
-                        <a href="{{ route('classroom.edit' , $classroom) }}" class="btn btn-primary rounded-1 text-light"><i class="bx bx-edit" style="font-size:16px;"></i></a>
+                    <div class="d-flex justify-content-center align-items-center w-100 gap-1 ">
+                        <a href="{{ route('classroom.edit' , $classroom) }}" class="btn btn-primary rounded-1 text-light btn-action"><i class="bx bx-edit" style=""></i></a>
                         <div>
                             <form action="{{ route('classroom.destroy', $classroom) }}" method="post">
                                 @method('delete')
                                 @csrf
-                                <button class="btn btn-danger rounded-1"><i class="bx bx-trash" style="font-size:16px;"></i></button>
+                                <button class="btn btn-danger rounded-1 btn-action "><i class="bx bx-trash" style=""></i></button>
                             </form>
                         </div>
                     </div>

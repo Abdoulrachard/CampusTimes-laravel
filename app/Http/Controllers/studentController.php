@@ -11,8 +11,7 @@ class StudentController extends Controller
     {
         $students = User::query() ;
         $students->where('role_id', '=', 3);
-        $students = $students->paginate(5);
-        return view('admin.student',[ 'students' =>   $students] );
+        return view('admin.student',[ 'students' =>   $students->get()] );
     }
     public function blocked()
     {

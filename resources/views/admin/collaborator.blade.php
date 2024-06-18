@@ -6,8 +6,8 @@
  <div class="d-flex justify-content-end mb-2 align-items-center">
     <a class='btn btn-primary text-center shadow' href="{{ route('collaborator.create') }}">Ajouter</a>
  </div>
- <div class="table-responsive">
-   <table class="table table-striped shadow-sm " id="myTable">
+ <div class="table-responsive mt-5 animate__animated animate__zoomIn">
+   <table class="table table-striped shadow-sm w-100" id="myTable">
         <thead class="bg-white ">
             <tr>
                 <th class="text-center">Profile</th>
@@ -30,21 +30,19 @@
                 <td>
                     <div class="d-flex justify-content-center align-items-center gap-1 ">
                         <a href="{{ route('collaborator.edit', $collaborator) }}" class="btn btn-primary rounded-1 text-light btn-action"><i class="bx bx-edit" style=""></i></a>
-                        <div>
-                            <form action="{{ route('collaborator.destroy', $collaborator) }}" method="post">
-                                @method('delete')
-                                @csrf
-                                <button class="btn btn-danger rounded-1 btn-action"><i class="bx bx-trash" style=""></i></button>
-                            </form>
-                        </div>
+                        <button class="btn btn-danger rounded-1 btn-action delete-btn">
+                            <i class="bx bx-trash"></i>
+                        </button>
                     </div>
+                    <form action="{{ route('collaborator.destroy', $collaborator) }}" method="post" class="delete-form">
+                        @method('delete')
+                        @csrf
+                    </form>
                 </td>
             </tr>
                 @endforeach
             
         </tbody>
    </table>
- </div>
-   {{ $collaborators->links()}}
- </div>
+
  @endsection

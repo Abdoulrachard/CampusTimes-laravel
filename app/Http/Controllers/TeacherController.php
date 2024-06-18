@@ -15,8 +15,7 @@ class TeacherController extends Controller
     {
         $teachers = User::query() ;
         $teachers->where('role_id', '=', 2);
-        $teachers = $teachers->paginate(5);
-        return view('admin.teacher',[ 'teachers' =>   $teachers] );
+        return view('admin.teacher',[ 'teachers' =>   $teachers->get()] );
     }
     public function create()
     {

@@ -3,7 +3,7 @@ $route = Route::currentRouteName()
 @endphp
 <section id="sidebar">
 	<a href="#" class="brand">
-		<img src="{{ asset('/storage/image/logouac.png')}}" alt="" style="width: 30px;height:30px;border-raduis:20px ;">
+		<i class='bx bxs-smile'></i>
 		<span class="text">Campustimes</span>
 	</a>
 	<ul class="side-menu top">

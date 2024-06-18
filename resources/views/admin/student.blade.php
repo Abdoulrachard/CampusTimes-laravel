@@ -3,8 +3,8 @@
 
  @section('content') 
  <div class="margin-update">
- <div class="table-responsive">
-    <table class="table table-striped shadow-sm " id="myTable">
+ <div class="table-responsive mt-5 animate__animated animate__zoomIn">
+    <table class="table table-striped shadow-sm w-100" id="myTable">
         <thead class="bg-white">
             <tr>
                 <th>Profile</th>
@@ -45,5 +45,4 @@
         </tbody>
    </table>
  </div>
-   {{ $students->links()}}
  @endsection

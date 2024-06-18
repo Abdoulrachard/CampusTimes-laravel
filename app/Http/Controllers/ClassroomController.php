@@ -10,7 +10,8 @@ class ClassroomController extends Controller
 {
     public function index()
     {
-        return view('admin.classrooms',[ 'classrooms' => Classroom::paginate(5) ] );
+        
+        return view('admin.classrooms',[ 'classrooms' => Classroom::all() ] );
     }
     public function create()
     {

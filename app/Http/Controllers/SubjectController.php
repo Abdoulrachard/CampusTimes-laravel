@@ -11,7 +11,7 @@ class SubjectController extends Controller
 {
     public function index()
     {
-        return view('admin.subjects',[ 'subjects' => Subject::paginate(5) ] );
+        return view('admin.subjects',[ 'subjects' => Subject::all() ] );
     }
     public function create()
     {

@@ -97,12 +97,69 @@ window.addEventListener('resize', function () {
 
 
 
-const switchMode = document.getElementById('switch-mode');
+// const switchMode = document.getElementById('switch-mode');
 
-switchMode.addEventListener('change', function () {
-	if(this.checked) {
-		document.body.classList.add('dark');
-	} else {
-		document.body.classList.remove('dark');
-	}
-})
+// switchMode.addEventListener('change', function () {
+// 	if(this.checked) {
+// 		document.body.classList.add('dark');
+// 	} else {
+// 		document.body.classList.remove('dark');
+// 	}
+// })
+$(document).ready(function() {
+	// Écouteur d'événement sur le lien de déconnexion
+	$('#logout-link').on('click', function(e) {
+		e.preventDefault();
+		// Afficher la boîte de dialogue SweetAlert pour confirmation
+		Swal.fire({
+			title: 'Déconnexion',
+			text: 'Êtes-vous sûr de vouloir vous déconnecter ?',
+			icon: 'question',
+			showCancelButton: true,
+			confirmButtonColor: '#3D5EE1',
+			cancelButtonColor: '#d33',
+			confirmButtonText: 'Oui',
+			cancelButtonText: 'Non'
+		}).then((result) => {
+			if (result.isConfirmed) {
+				// Soumettre le formulaire de déconnexion
+				document.getElementById('disconnect-form').submit();
+			}
+		});
+	});
+});
+$(document).ready(function() {
+	// Écouteur d'événement sur le bouton de suppression
+	$('.delete-btn').on('click', function(e) {
+		e.preventDefault();
+
+		// Afficher la boîte de dialogue SweetAlert pour confirmation
+		Swal.fire({
+			title: 'Êtes-vous sûr de vouloir supprimer cet élément ?',
+			text: 'Cette action est irréversible !',
+			icon: 'warning',
+			showCancelButton: true,
+			confirmButtonColor: '#d33',
+			cancelButtonColor: '#3085d6',
+			confirmButtonText: 'Oui, supprimer',
+			cancelButtonText: 'Annuler'
+		}).then((result) => {
+			if (result.isConfirmed) {
+				// Soumettre le formulaire de suppression correspondant
+				$(e.target).closest('td').find('.delete-form').submit();
+			}
+		});
+	});
+});
+$(document).ready(function() {
+    $('.bxs-bell').each(function(i, e) {
+        $(e).on('click', function() {
+            Swal.fire({
+                title: 'Notification',
+                text: 'Les notifications vous concernant sont envoyées directement sur votre boite mail. Merci !',
+                icon: 'info',
+                confirmButtonText: 'OK'
+            });
+        });
+    });
+});

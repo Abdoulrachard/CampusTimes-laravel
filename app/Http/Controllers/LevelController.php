@@ -10,7 +10,7 @@ class LevelController extends Controller
 {
     public function index()
     {
-        return view('admin.levels',[ 'levels' => Level::orderBy('id', 'asc')->paginate(5) ] );
+        return view('admin.levels',[ 'levels' => Level::orderBy('id', 'asc')->get() ] );
     }
     public function create()
     {

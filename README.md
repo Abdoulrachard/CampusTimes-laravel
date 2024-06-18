@@ -44,21 +44,27 @@ Pour récupérer et lancer l'application sur votre machine, assurez-vous d'abord
 
 ```bash
 git clone https://github.com/Abdoulrachard/Campustimes-laravel.git
+```
 ```bash
 cd campustimes-laravel
+```
 
 ```bash	
 composer install
-```bash	
-cp .env.example .env
+```
+```bash 
+cp .env.example .env 
+```
 ```bash	
 php artisan key:generate
-
+```
 ```bash	
 php artisan migrate
+```
 
 ```bash	
 php artisan serve
+```
 L'application va démarrer sur l'adresse http://localhost:8000 :  copiez cette adresse et ouvrez-la dans le navigateur.
 L'application est maintenant lancée !
 

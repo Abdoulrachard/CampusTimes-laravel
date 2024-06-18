@@ -13,9 +13,19 @@ class StudentController extends Controller
         $students->where('role_id', '=', 3);
         return view('admin.student',[ 'students' =>   $students->get()] );
     }
-    public function blocked()
+    public function blocked(User $student)
     {
-        // return view('admin.form.student',[ 'student' => new User()]) ;
+        if ( $student->isblocked() ){
+            $student->blocked = false ;
+            $student->save();
+            toastr()->success("L'étudiant à été débloquer avec success") ;
+        }else{
+            $student->blocked = true ;
+            $student->save();
+            toastr()->success("L'étudiant à été bloquer avec success") ;
+        }
+        
+        return redirect()->route('student.index');
     }
 
 }

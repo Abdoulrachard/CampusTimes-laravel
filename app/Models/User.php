@@ -52,6 +52,9 @@ class User extends Authenticatable
     public function profil(){
         return Storage::url($this->profil) ;
     }
+    public function isblocked(){
+        return $this->blocked ;
+    }
     /**
      * The attributes that are mass assignable.
      *

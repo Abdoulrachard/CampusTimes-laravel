@@ -453,7 +453,7 @@ body {
 #content main .head-title .left .breadcrumb {
 	display: flex;
 	align-items: center;
-	grid-gap: 16px;
+	justify-content: space-between;
 }
 #content main .head-title .left .breadcrumb li {
 	color: var(--dark);
@@ -699,6 +699,12 @@ body {
 	}
 	.table th , .table td{
 		font-size: 14px !important;
+	}
+	.breadcrumb li a {
+		font-size: 0.8rem;
+	}
+	.left h4{
+		font-size: 0.9rem;
 	}
 	
 }

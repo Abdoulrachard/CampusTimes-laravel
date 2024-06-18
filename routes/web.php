@@ -41,7 +41,7 @@ Route::resource('timetable',TimetableController::class)->except('show');
 Route::resource('teacher',TeacherController::class)->except('show');
 Route::resource('collaborator',CollaboratorController::class)->except('show');
 Route::get('student',[StudentController::class,'index'])->name('student.index');
-Route::post('student',[StudentController::class,'blocked'])->name('student.blocked');
+Route::post('student/{student}',[StudentController::class,'blocked'])->name('student.blocked');
 Route::view('/dashboard' , 'admin.dashboard')->name('admin.dashboard') ;
 });
 });

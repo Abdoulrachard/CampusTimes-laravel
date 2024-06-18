@@ -18,15 +18,23 @@ class LoginController extends Controller
     public function doLogin(LoginRequest $request)
     {
         $credentials = $request->validated() ;
+        
         $remenber = $request->has('remenber');
         if(Auth::attempt($credentials, $remenber))
         {
             session()->regenerate() ;
+            if(Auth::user()->isblocked()){
+                Auth::logout() ;
+                return redirect()->route('auth.login')->withErrors(
+                    [ 'email' =>  "Les identifiants sont incorrectes"] 
+                 )->onlyInput('email') ; ;
+            }else{
             $user = Auth::user() ;
             if($user->role_id === 1 ){
                 return redirect()->intended(RouteServiceProvider::HOME) ;
             }else{
                 return redirect()->intended(RouteServiceProvider::STUDENT) ;
+            }
             }
         } 
         return  back()->withErrors(

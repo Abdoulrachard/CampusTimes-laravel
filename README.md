@@ -1,4 +1,3 @@
-# Accès à la route logout en étant connecté ou déconnecté
 ## CAMPUSTIMES 
 
 ## Description
@@ -11,9 +10,13 @@ Le projet campustimes est un projet qui consiste à déployer une application ca
 
 ![Auth Screenshot](./docs/auth.png)
 
+### - Inscription
+
+![Auth Screenshot](./docs/register.png)
+
 ### Dashboard (Admin)
 
-![Dashboard Admin Screenshot](./docs/dashboard-2.png)
+![Dashboard Admin Screenshot](./docs/dash.png)
 
 ### Dashboard (Étudiant)
 

@@ -1,0 +1,6 @@
+-Avoir acces au dashboard de collaborateur mais sans la posibilité de modifiernou de creer 
+-Utiliser les policie pour eviter l'acces manuel des route d'admin
+- creer des emplois du temps , utiliser les meme route de visualisation de l'emplois du temps pour optimiser le code 
+- Envoie des mail lors de la creation d'un proffesseur ou d'un collaborateur par l'admin 
+- envoie de mail a tout les etudiant et proffesseur concerner lors de la creation d'un emplois du temps 
+- mse a jour d'un user et changement de profil , mot de passe oublier et autre 

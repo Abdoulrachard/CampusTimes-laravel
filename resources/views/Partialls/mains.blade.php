@@ -18,7 +18,7 @@ use App\Models\Classroom;
     @elseif (str_starts_with($route, 'timetable.'))
         <h4>Emploi du Temps</h4>
     @elseif (str_starts_with($route, 'faq.'))
-        <h4>faq</h4>
+        <h4>FAQ</h4>
     
     @endif
         
@@ -38,7 +38,7 @@ use App\Models\Classroom;
     @elseif (str_starts_with($route, 'timetable.'))
         <a class="text-black">Emploi du Temps</a>
     @elseif (str_starts_with($route, 'faq.'))
-        <a class="text-black">FAQ</a>
+        <a class="text-black">faq</a>
     @endif
     
 

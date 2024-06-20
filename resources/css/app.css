@@ -57,6 +57,11 @@ th ,  td {
 	color: #707684;
 
 }
+.time-entry {
+    background-color: var(--fd-color-primary)!important;
+    border: 1px solid var(--fd-color-silver-2)!important;
+    cursor: pointer;
+}
 .position-custom-2{
 	top:45% ;
 	left: 91%;
@@ -164,6 +169,12 @@ li {
 	--light-yellow: #FFF2C6;
 	--orange: #FD7238;
 	--light-orange: #FFE0D3;
+	--fd-color-blue: #18aefa;
+    --fd-color-silver: #F7F7FA;
+    --fd-color-primary: #3D5EE1;
+    --fd-color-secondary: #2A3042;
+    --fd-color-silver-2: #e5e5e5;
+    --fd-color-orange: #FE643B;
 }
 ::-webkit-scrollbar { width: 5px; height: 5px;}
 .others-timetables::-webkit-scrollbar { width: 0px!important; height: 0px;}

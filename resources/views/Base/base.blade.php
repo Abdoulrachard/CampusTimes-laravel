@@ -17,8 +17,9 @@
     <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.11.1/sweetalert2.all.min.js" integrity="sha512-awhfGDoHs6zOw2bGnlOX1tFMpn62CLz2skNks2+LiDdJIRi9rkXrf5A1fVb7VgFyymxFVp6EfFqOZFr8sqPu6g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.14/index.global.min.js"></script>
     @vite('resources/css/app.css')
-    <title>@yield('title', "Campustimes")</title>
+    <title>@yield('title', "Dashboard")</title>
 </head>
 <body>
     <div id="app">
@@ -33,7 +34,6 @@
             @include('Partials.footer')
         </footer>
     </div>    
-    
     @vite('resources/js/app.js')
     <script>
         

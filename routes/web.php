@@ -17,7 +17,7 @@ use App\Http\Controllers\TimetableController;
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
+| routes are loadestudent.dashboardd by the RouteServiceProvider and all of them will
 | be assigned to the "web" middleware group. Make something great!
 |
 */
@@ -31,8 +31,10 @@ Route::middleware('guest')->prefix('auth')->group(function () {
 }) ;
 
 Route::middleware('auth')->group(function(){
-Route::get('/',function(){ return view('student.dashboard');});
+Route::view('/','student.dashboard')->name('student.dashboard');
 Route::delete('auth/logout', [LoginController::class, 'logout'])->name('auth.logout');
+Route::view('faq','student.faq')->name('faq.index');
+Route::view('timetable','student.timetable')->name('student.timetable.index');
 Route::prefix('admin')->group(function(){
 Route::resource('level',LevelController::class)->except('show');
 Route::resource('subject',SubjectController::class)->except('show');

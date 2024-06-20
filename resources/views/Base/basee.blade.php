@@ -14,13 +14,8 @@
     @vite('resources/css/app.css')
     <link rel="stylesheet" href="/css/timetablejs.css">
     <script src="/js/timetable.js"></script>
-
-
     <title>@yield('title', "Campustimes")</title>
 </head>
-<style>
- 
-</style>
 <body>
     <div id="app">
             @include('Partialls.sidebars')

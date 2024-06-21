@@ -15,7 +15,7 @@ use App\Models\Classroom;
     <div class="left">
         @if (str_starts_with($route, 'student.dash'))
         <h4>Dashboard</h4>
-    @elseif (str_starts_with($route, 'timetable.'))
+    @elseif (str_starts_with($route, 'student.timetab'))
         <h4>Emploi du Temps</h4>
     @elseif (str_starts_with($route, 'faq.'))
         <h4>FAQ</h4>
@@ -35,8 +35,8 @@ use App\Models\Classroom;
         <li>
     @if (str_starts_with($route, 'admin.dash'))
         <a class="text-black">Dashboard</a>
-    @elseif (str_starts_with($route, 'timetable.'))
-        <a class="text-black">Emploi du Temps</a>
+    @elseif (str_starts_with($route, 'student.timetabl'))
+        <a class="text-black">EDT</a>
     @elseif (str_starts_with($route, 'faq.'))
         <a class="text-black">faq</a>
     @endif

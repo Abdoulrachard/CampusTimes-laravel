@@ -41,11 +41,14 @@ class LoginController extends Controller
             [ 'email' =>  "Les identifiants sont incorrectes"] 
          )->onlyInput('email') ;
     }
-    public function logout()
+    public function logout(Request $request)
     {
-        Auth::logout() ;
-        session()->invalidate();
-        session()->regenerateToken();
-        return to_route('auth.login') ;
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect()->route('auth.login');
     }
 }

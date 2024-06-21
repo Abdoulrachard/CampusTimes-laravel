@@ -30,20 +30,20 @@ Route::middleware('guest')->prefix('auth')->group(function () {
     Route::post('login', [LoginController::class, 'doLogin']);
 }) ;
 
-Route::middleware('auth')->group(function(){
-Route::view('/','student.dashboard')->name('student.dashboard');
-Route::delete('auth/logout', [LoginController::class, 'logout'])->name('auth.logout');
-Route::view('faq','student.faq')->name('faq.index');
-Route::view('timetable','student.timetable')->name('student.timetable.index');
-Route::prefix('admin')->group(function(){
-Route::resource('level',LevelController::class)->except('show');
-Route::resource('subject',SubjectController::class)->except('show');
-Route::resource('classroom',ClassroomController::class)->except('show');
-Route::resource('timetable',TimetableController::class)->except('show');
-Route::resource('teacher',TeacherController::class)->except('show');
-Route::resource('collaborator',CollaboratorController::class)->except('show');
-Route::get('student',[StudentController::class,'index'])->name('student.index');
-Route::post('student/{student}',[StudentController::class,'blocked'])->name('student.blocked');
-Route::view('/dashboard' , 'admin.dashboard')->name('admin.dashboard') ;
+Route::delete('auth/logout', [LoginController::class, 'logout'])->middleware('auth')->name('auth.logout');
+Route::middleware(['auth'])->group(function (){
+        Route::view('/', 'student.dashboard')->name('student.dashboard');
+        Route::view('faq', 'student.faq')->name('faq.index');
+        Route::view('timetable', 'student.timetable')->name('student.timetable.index');
 });
+Route::prefix('admin')->middleware(['auth'])->group(function () {
+        Route::resource('level', LevelController::class)->except('show');
+        Route::resource('subject', SubjectController::class)->except('show');
+        Route::resource('classroom', ClassroomController::class)->except('show');
+        Route::resource('timetable', TimetableController::class)->except('show');
+        Route::resource('teacher', TeacherController::class)->except('show');
+        Route::resource('collaborator', CollaboratorController::class)->except('show');
+        Route::get('student', [StudentController::class, 'index'])->name('student.index');
+        Route::post('student/{student}', [StudentController::class, 'blocked'])->name('student.blocked');
+        Route::view('/dashboard', 'admin.dashboard')->name('admin.dashboard');
 });

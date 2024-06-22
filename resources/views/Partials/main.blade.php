@@ -27,6 +27,8 @@ use App\Models\Classroom;
         <h4>Matières</h4>
     @elseif (str_starts_with($route , 'classroom.'))
         <h4>Salles de classe</h4>
+    @elseif (str_starts_with($route , 'timetable.'))
+        <h4>Emploi du temps</h4>
     @endif
         
     </div>
@@ -54,6 +56,8 @@ use App\Models\Classroom;
         <a class="text-black">Matières</a>
     @elseif (str_starts_with($route , 'classroom.'))
         <a class="text-black">Salles de classe</a>
+        @elseif (str_starts_with($route , 'timetable.'))
+        <a class="text-black">Empoi du temps</a>
     @endif
     
 

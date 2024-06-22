@@ -13,8 +13,8 @@ $route = Route::currentRouteName()
 				<span class="text">Dashboard</span>
 			</a>
 		</li>
-		<li  @class(['', 'active' => str_starts_with($route , 'timestable.')])>
-			<a href="#">
+		<li  @class(['', 'active' => str_starts_with($route , 'timetable.')])>
+			<a href="{{ route('timetable.index') }}">
 				<i class='bx bxs-calendar' ></i>
 				<span class="text">Emplois du Temps</span>
 			</a>

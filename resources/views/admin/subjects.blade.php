@@ -13,6 +13,7 @@
                 <th>code</th>
                 <th>label</th>
                 <th>Heure total</th>
+                <th>Classe</th>
                 <th class="">Actions</th>
             </tr>
         </thead>
@@ -23,6 +24,7 @@
                 <td>{{ $subject->code }}</td>
                 <td>{{ $subject->label }}</td>
                 <td>{{ $subject->total_time }}</td>
+                <td>{{ $subject->level->label }}</td>
                 <td>
                     <div class="d-flex justify-content-center align-items-center w-100 gap-1 ">
                         <a href="{{ route('subject.edit', $subject) }}" class="btn btn-primary rounded-1 text-light btn-action"><i class="bx bx-edit" style=""></i></a>

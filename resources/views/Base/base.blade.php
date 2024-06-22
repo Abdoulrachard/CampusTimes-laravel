@@ -19,6 +19,8 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.14/index.global.min.js"></script>
     @vite('resources/css/app.css')
+    <link rel="stylesheet" href="/css/timetablejs.css">
+    <script src="/js/timetable.js"></script>
     <title>@yield('title', "Dashboard")</title>
 </head>
 <body>
@@ -35,6 +37,8 @@
         </footer>
     </div>    
     @vite('resources/js/app.js')
+    @vite( 'resources/js/timetable.js')
+
     <script>
         
 

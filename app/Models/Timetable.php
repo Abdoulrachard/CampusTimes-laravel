@@ -26,6 +26,6 @@ class Timetable extends Model
             return $this->belongsTo(Level::class);
         }
     protected $fillable = [
-        'start_time','start_end','week',
+        'start_time', 'end_time', 'week', 'user_id', 'subject_id', 'classroom_id', 'level_id',
     ];
 }

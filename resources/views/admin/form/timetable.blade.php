@@ -17,7 +17,7 @@
                 <select  id="timetableinput" name="level" class="form-control @error('level') is-invalid @enderror">
                     <option value="">Choisi une classe</option>
                     @foreach($levels as $level )
-                    <option value="{{ $level->id }}"  @selected(old('level', $timetable->level == $level->id))>{{ $level->label }}</option>
+                    <option value="{{ $level->id }}"  @selected(old('level', $timetable->level === $level->id))>{{ $level->label }}</option>
                     @endforeach
                 </select>
                 <div class="invalid-feedback">
@@ -32,7 +32,7 @@
                 <select  id="timetableinput" name="subject" class="form-control @error('subject') is-invalid @enderror">
                     <option value="">Choisi une matière</option>
                     @foreach($subjects as $subject )
-                     <option value="{{ $subject->id }}" @selected( old('subject',$timetable->subject == $subject->id))>{{ $subject->label }}</option>
+                     <option value="{{ $subject->id }}" @selected( old('subject',$timetable->subject === $subject->id))>{{ $subject->label }}</option>
                     @endforeach
                 </select>
                 <div class="invalid-feedback">
@@ -48,7 +48,7 @@
                 <select  id="timetableinput" name="teacher" class="form-control @error('teacher') is-invalid @enderror">
                     <option value="">Choisi un proff</option>
                     @foreach($teachers as $teacher )
-                    <option value="{{ $teacher->id }}" @selected(old('teacher',$timetable->teacher == $teacher->id))>{{ $teacher->lastname }} {{ $teacher->firstname }}</option>
+                    <option value="{{ $teacher->id }}" @selected(old('teacher',$timetable->teacher === $teacher->id))>{{ $teacher->lastname }} {{ $teacher->firstname }}</option>
                     @endforeach
                 </select>
                 <div class="invalid-feedback">
@@ -62,7 +62,7 @@
                 <select id="timetableinput" name="classroom" class="form-control @error('classroom') is-invalid @enderror">
                     <option value="">Choisi une salle</option>
                     @foreach($classrooms as $classroom) 
-                        <option value="{{ $classroom->id }}" @selected(old('classroom',$timetable->classroom == $classroom->id))>{{ $classroom->label }}</option>
+                        <option value="{{ $classroom->id }}" @selected(old('classroom',$timetable->classroom === $classroom->id))>{{ $classroom->label }}</option>
                     @endforeach
                 </select>
                 <div class="invalid-feedback">

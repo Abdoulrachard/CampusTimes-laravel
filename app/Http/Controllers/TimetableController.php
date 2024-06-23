@@ -72,7 +72,6 @@ class TimetableController extends Controller
     }
     public function update(Timetable $timetable ,TimestableRequest $request)
     {
-        $timetable = new Timetable();
         $startformat = new DateTime($request->start_time);
         $endformat = new DateTime($request->end_time);
 

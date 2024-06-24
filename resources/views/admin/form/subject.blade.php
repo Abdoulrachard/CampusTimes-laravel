@@ -44,7 +44,7 @@
             <div class="col-md-6 ">
                 <label for="subjectinput" class="mt-2">Level</label>
                 <select name="level_id" id="" class="form-control @error('level_id') is-invalid @enderror">
-                    <option value="">Selectionner un level</option>
+                    <option value=""disabled>Selectionner un level</option>
                     @foreach ($levels as $level)
                         <option value="{{ $level->id }}" @selected(old('level_id',$level->id === $subject->level_id))>{{ $level->label }}</option>  
                     @endforeach

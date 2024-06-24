@@ -63,16 +63,17 @@ class TimetableController extends Controller
      */
     public function show(Timetable $timetable)
     {
-        return view('admin.timetableshow', $timetable);
+        return view('admin.timetableshow', compact('timetable'));
     }
 
     public function edit(Timetable $timetable)
     {
-        return view('admin.form.timetable', ['timetable' => $timetable]) ;
+        $teachers = User::query() ;
+        $teachers->where('role_id', '=', 2);
+        return view('admin.form.timetable',['timetable' => $timetable,'teachers' => $teachers->get(), 'classrooms' => Classroom::all(),'levels' => Level::all(), 'subjects' => Subject::all() ]) ;
     }
     public function update(Timetable $timetable ,TimestableRequest $request)
     {
-        $timetable = new Timetable();
         $startformat = new DateTime($request->start_time);
         $endformat = new DateTime($request->end_time);
 

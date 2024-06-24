@@ -37,8 +37,7 @@
         </footer>
     </div>    
     @vite('resources/js/app.js')
-    @vite( 'resources/js/timetable.js')
-
+    @yield('scripts')
     <script>
         
 

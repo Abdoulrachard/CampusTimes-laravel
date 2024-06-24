@@ -28,7 +28,9 @@ class TimetableController extends Controller
     {
         $teachers = User::query() ;
         $teachers->where('role_id', '=', 2);
-        return view('admin.form.timetable',['timetable' => new Timetable(),'teachers' => $teachers->get(), 'classrooms' => Classroom::all(),'levels' => Level::all(), 'subjects' => Subject::all() ]);
+        $classrooms = Classroom::query() ;
+        $classrooms->where('status', '=', 'on');
+        return view('admin.form.timetable',['timetable' => new Timetable(),'teachers' => $teachers->get(), 'classrooms' => $classrooms->get(),'levels' => Level::all(), 'subjects' => Subject::all() ]);
     }
 
     /**
@@ -44,17 +46,21 @@ class TimetableController extends Controller
         $end = $endformat->format('Y-m-d H:i');
 
         $week = $startformat->format('W');
+        if($start < $end){
+            $timetable->create([
+                'week' => $week,
+                'user' => $request->teacher,
+                'subject' => $request->subject,
+                'classroom' => $request->classroom,
+                'level' => $request->level,
+                'start_time' => $start,
+                'end_time' => $end,
+            ]);
+            toastr()->success("L'emploi du temps à été créer avec succès !") ;
+        }else{
+            toastr()->error("L'heure de debut ne doit pas être superieure à celle de fin ?!") ;
+        }
         
-        $timetable->create([
-            'week' => $week,
-            'user_id' => $request->teacher,
-            'subject_id' => $request->subject,
-            'classroom_id' => $request->classroom,
-            'level_id' => $request->level,
-            'start_time' => $start,
-            'end_time' => $end,
-        ]);
-        toastr()->success("L'emploi du temps à été créer avec succès !") ;
         return redirect()->route('timetable.index') ;
     }
 
@@ -70,7 +76,9 @@ class TimetableController extends Controller
     {
         $teachers = User::query() ;
         $teachers->where('role_id', '=', 2);
-        return view('admin.form.timetable',['timetable' => $timetable,'teachers' => $teachers->get(), 'classrooms' => Classroom::all(),'levels' => Level::all(), 'subjects' => Subject::all() ]) ;
+        $classrooms = Classroom::query() ;
+        $classrooms->where('status', '=', 'on');
+        return view('admin.form.timetable',['timetable' => $timetable,'teachers' => $teachers->get(), 'classrooms' => $classrooms->get(),'levels' => Level::all(), 'subjects' => Subject::all() ]) ;
     }
     public function update(Timetable $timetable ,TimestableRequest $request)
     {
@@ -82,18 +90,23 @@ class TimetableController extends Controller
 
         $week = $startformat->format('W');
 
-        $timetable->update([
-            'week' => $week,
-            'teacher' => $request->teacher,
-            'subject' => $request->subject,
-            'classroom' => $request->classroom,
-            'level' => $request->level,
-            'start_time' => $start,
-            'end_time' => $end,
-        ]);
-        toastr()->success("L'emploi du temps à été mise à jour avec succès !") ;
+        if($start < $end){
+            $timetable->update([
+                'week' => $week,
+                'user' => $request->teacher,
+                'subject' => $request->subject,
+                'classroom' => $request->classroom,
+                'level' => $request->level,
+                'start_time' => $start,
+                'end_time' => $end,
+            ]);
+            toastr()->success("L'emploi du temps à été mise à jour avec succès !") ;
+        }else{
+            toastr()->error("L'heure de debut ne doit pas être superieure à celle de fin ?!") ;
+        }
         return redirect()->route('timetable.index');
     }
+
     public function destroy(Timetable $timetable)
     {
         $timetable = $timetable->delete();

@@ -22,7 +22,11 @@
                 <tr>
                 <td>Emploi du Temps de la Semaine {{ $timetable->week }}</td>
                 <td>{{ $timetable->level->label}}</td>
+<<<<<<< HEAD
                 <td><a class="btn btn-primary rounded-pill" href="{{ route('timetable.show',$timetable) }}">voir emploi</a></td>
+=======
+                <td><a class="btn btn-primary rounded-pill" href="{{ route('timetable.show',$timetable) }}">voir emploi </a></td>
+>>>>>>> aedb544907549f8df0790b40af1a71722d98d9fc
                 <td class="">
                     <div class="d-flex justify-content-center align-items-center w-100 gap-1 ">
                         <a href="{{ route('timetable.edit', $timetable) }}" class="btn btn-primary rounded-1 text-light btn-action "><i class="bx bx-edit" style=""></i></a>

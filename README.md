@@ -28,7 +28,7 @@ Le projet campustimes est un projet qui consiste à déployer une application ca
 
 ### Liste des emplois du temps (Admin)
 
-![Liste Emplois du Temps Screenshot](./docs/timetables.png)
+![Liste Emplois du Temps Screenshot](./docs/timetable.png)
 
 ### Visualisation d'un emploi du temps
 

@@ -5,7 +5,7 @@
     "description": "Plateforme de gestion d'emploi du temps.",
     "icons": [
         {
-            "src": "/static/img/favicon-16x16.png",
+            "src": "/public/image/favicon-16x16.png",
             "sizes": "16x16",
             "type": "image/png"
         },

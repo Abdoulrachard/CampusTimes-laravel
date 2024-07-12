@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#3c91e6">
+    <!-- Safari on iOS -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#3c91e6">
     <link rel="icon" href="{{ asset('/public/favicon.ico') }}" type="image/x-icon">
     <link rel="manifest" href="{{ asset('/public/manifest.json') }}">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>

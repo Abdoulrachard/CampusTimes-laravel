@@ -77,7 +77,7 @@ use App\Models\Classroom;
         <div class="row row-cols-2 justify-content-between">
             <div class="info align-self-center">
                 <h6 class="text-muted">Le plus chargé</h6>
-                <h5>1</h5>
+                <h5>Jeudi</h5>
             </div>
             <div>
                 <div class="card-img p-2 text-center">

@@ -734,7 +734,7 @@ body {
 		font-size: 0.95rem;
 	}
 	.grid-2{
-		grid-template-columns: 6fr 6fr !important;
+		grid-template-columns: 1fr !important;
 	}
 .card-img img, .card-social img { width : 30px; height: 30px;}
 

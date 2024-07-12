@@ -46,14 +46,15 @@ class TimetableController extends Controller
         $end = $endformat->format('Y-m-d H:i');
 
         $week = $startformat->format('W');
+
         if($start < $end){
             
             $timetable->create([
                 'week' => $week,
-                'user' => $request->teacher,
-                'subject' => $request->subject,
-                'classroom' => $request->classroom,
-                'level' => $request->level,
+                'user_id' => $request->teacher,
+                'subject_id' => $request->subject,
+                'classroom_id' => $request->classroom,
+                'level_id' => $request->level,
                 'start_time' => $start,
                 'end_time' => $end,
             ]);

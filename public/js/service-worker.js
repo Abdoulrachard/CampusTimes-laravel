@@ -31,7 +31,9 @@ self.addEventListener('install', function(event) {
             "https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.11.1/sweetalert2.all.min.js",
             "https://cdn.jsdelivr.net/npm/chart.js",
             "https://cdn.jsdelivr.net/npm/fullcalendar@6.1.14/index.global.min.js",
-            
+            '/public/vendor/flasher/flasher-toastr.min.js',
+            '/public/vendor/flasher/flasher.min.css',
+            '/public/vendor/flasher/flasher.min.js',
           ]);
         })
     );

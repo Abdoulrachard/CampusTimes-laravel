@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="{{ asset('/public/favicon.ico') }}" type="image/x-icon">
+    <meta name="theme-color" content="#3c91e6">
+    <!-- Safari on iOS -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#3c91e6">
     <link rel="manifest" href="{{ asset('/public/manifest.json') }}">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">

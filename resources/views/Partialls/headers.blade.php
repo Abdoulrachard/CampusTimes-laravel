@@ -12,7 +12,7 @@
 	<div style="" class="profil-container d-flex align-items-center   mx-2    " >
 		<a href="#" class="notification mx-4">
 			<i class='bx bxs-bell' ></i>
-			<span class="num">8</span>
+			<span class="num">1</span>
 		</a>
 		<a href="#" class="profile" style="margin-right:15px;">
 			<img src="{{ Auth::user()->profil() }}" alt="">

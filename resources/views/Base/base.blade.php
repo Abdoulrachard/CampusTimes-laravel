@@ -10,6 +10,7 @@
     <!-- Windows Phone -->
     <meta name="msapplication-navbutton-color" content="#3c91e6">
     <link rel="icon" href="{{ asset('/public/favicon.ico') }}" type="image/x-icon">
+    <link rel="manifest" href="{{ asset('/public/manifest.json') }}">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     {{-- <link rel="stylesheet" href="http://localhost/bootstrap/dist/css/bootstrap.min.css"> --}}

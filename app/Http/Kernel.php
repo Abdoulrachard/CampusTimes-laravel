@@ -37,8 +37,6 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             \App\Http\Middleware\CheckUserIsBlocked::class,
-            // \App\Http\Middleware\DeniedForStudent::class,
-            // \App\Http\Middleware\DeniedForAdmin::class,
         ],
 
         'api' => [
@@ -67,8 +65,8 @@ class Kernel extends HttpKernel
         'signed' => \App\Http\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
-        // 'role' => \App\Http\Middleware\DeniedForStudent::class,
-        // 'student' => \App\Http\Middleware\DeniedForAdmin::class,
+        'studentDenied' => \App\Http\Middleware\DeniedForStudent::class,
+        'adminDenied' => \App\Http\Middleware\DeniedForAdmin::class,
         
     ];
 }

@@ -31,12 +31,12 @@ Route::middleware('guest')->prefix('auth')->group(function () {
 }) ;
 
 Route::delete('auth/logout', [LoginController::class, 'logout'])->middleware('auth')->name('auth.logout');
-Route::middleware(['auth'])->group(function (){
+Route::middleware(['auth','adminDenied'])->group(function (){
         Route::view('/', 'student.dashboard')->name('student.dashboard');
         Route::view('faq', 'student.faq')->name('faq.index');
         Route::view('timetable', 'student.timetable')->name('student.timetable.index');
 });
-Route::prefix('admin')->middleware(['auth'])->group(function () {
+Route::prefix('admin')->middleware(['auth','studentDenied'])->group(function () {
         Route::resource('level', LevelController::class)->except('show');
         Route::resource('subject', SubjectController::class)->except('show');
         Route::resource('classroom', ClassroomController::class)->except('show');

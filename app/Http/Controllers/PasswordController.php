@@ -43,7 +43,7 @@ class PasswordController extends Controller
             }
     
             // Stocker la nouvelle image et obtenir son chemin
-            $data['profil'] = $profil->store('images', 'public');
+            $data['profil'] = $profil->store('image', 'public');
         }
     
         // Mettre à jour les informations de l'utilisateur uniquement si elles sont fournies

@@ -19,7 +19,7 @@
                 {{-- @dd($teachers) --}}
                 @foreach ($students as $student)
                 <tr>
-                <td><img src="{{ $student->profil() }}" alt="" style="width: width: 36px;height: 36px;object-fit: cover;border-radius: 50%; "></td>
+                <td><img src="{{ $student->storageUrl() }}" alt="" style="width: width: 36px;height: 36px;object-fit: cover;border-radius: 50%; "></td>
                 <td>{{ $student->lastname }}</td>
                 <td>{{ $student->firstname }}</td>
                 <td>{{ $student->phone }}</td>

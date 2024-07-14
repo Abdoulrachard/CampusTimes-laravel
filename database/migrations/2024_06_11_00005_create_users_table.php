@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('lastname');
             $table->string('email')->unique();
             $table->string('phone')->unique();
-            $table->string('profil')->default('default.svg')->nullable();
+            $table->string('profil')->default('image/default.svg')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->boolean('blocked')->default(false);
@@ -30,7 +30,7 @@ return new class extends Migration
             $table->timestamps();
         });
         DB::table('users')->insert([
-            ['firstname' => 'Doe ', 'lastname' => 'John' , 'email' => 'johdoe@example.com' , 'phone' => '12345748','password' => Hash::make('admin007'),'role_id' => 1]
+            ['firstname' => 'Doe ', 'lastname' => 'John' , 'email' => 'johndoe@example.com' , 'phone' => '12345748','password' => Hash::make('admin007'),'role_id' => 1]
         ]) ;
     }
 

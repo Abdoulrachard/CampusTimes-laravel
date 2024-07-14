@@ -55,9 +55,12 @@ class User extends Authenticatable
     public function isblocked(){
         return $this->blocked ;
     }
-    public function hasRole($role)
-    {
-        return $this->role === $role; // Ici, "role" est le champ de votre modèle User qui contient le rôle de l'utilisateur
+    // public function hasRole($role)
+    // {
+    //     return $this->role === $role; // Ici, "role" est le champ de votre modèle User qui contient le rôle de l'utilisateur
+    // }
+    public function storageUrl(){
+        return Storage::url($this->profil) ;
     }
     /**
      * The attributes that are mass assignable.
@@ -67,7 +70,8 @@ class User extends Authenticatable
     protected $fillable = [
         'firstname','lastname','password','phone',
         'email',
-        'password', 'role_id'
+        'password', 'role_id', 'profil'
+
     ];
 
     /**

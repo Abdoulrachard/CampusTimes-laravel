@@ -31,8 +31,8 @@ use App\Models\Classroom;
         <h4>Salles de classe</h4>
     @elseif (str_starts_with($route , 'timetable.'))
         <h4>Emploi du temps</h4>
-        @elseif (str_starts_with($route , 'profil.'))
-        <h4>Profile</h4>
+        @elseif (str_starts_with($route , 'profi'))
+        <h4>Mon compte</h4>
     @endif
         
     </div>
@@ -62,7 +62,7 @@ use App\Models\Classroom;
         <a class="text-black">Salles de classe</a>
         @elseif (str_starts_with($route , 'timetable.'))
         <a class="text-black">Empoi du temps</a>
-        @elseif (str_starts_with($route , 'profil.'))
+        @elseif (str_starts_with($route , 'profile.'))
         <a>Profile</a>
     @endif
     
@@ -140,7 +140,7 @@ use App\Models\Classroom;
 @elseif (str_starts_with($route, 'faq.'))
 <h4>FAQ</h4>
 @elseif (str_starts_with($route, 'profile.'))
-<h4 class="text-black">Profile</h4>
+<h4 class="text-black">Mon compte</h4>
 @endif
 
 </div>

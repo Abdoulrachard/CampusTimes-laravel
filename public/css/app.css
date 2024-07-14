@@ -755,8 +755,8 @@ body {
 }
 .z-index {
 	z-index: 2000000000000 !important;
-	width: 22em !important;
-	font-size: .8rem !important;
+	width: 25em !important;
+	font-size: .9rem !important;
 }
 .z-index .swal2-popup{
 	z-index: 2000000000000 !important;

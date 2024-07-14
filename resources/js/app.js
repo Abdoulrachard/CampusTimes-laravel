@@ -167,4 +167,10 @@ let table = new DataTable('#myTable',{
 	language: langueOptions,
 
 });
+let pad = document.querySelectorAll('.margin-update');
+pad.forEach(element => {
+	if (innerWidth <=768 ){
+		element.classList.remove('p-4');
+	}
+});
 

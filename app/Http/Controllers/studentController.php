@@ -14,7 +14,7 @@ class StudentController extends Controller
         return view('admin.student',[ 'students' =>   $students->get()] );
     }
     public function blocked(User $student)
-        {
+     {
             if ( $student->isblocked() ){
                 $student->blocked = false ;
                 $student->save();

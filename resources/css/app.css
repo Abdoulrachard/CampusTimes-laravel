@@ -52,6 +52,15 @@ th ,  td {
 	border-radius:  2px !important;
 	background-color: #e8f0fe !important
 }
+.gta{
+	padding: .5% 7% !important;
+}
+.input-customs{
+	font-size: 1rem !important;
+	color: #060714 !important;
+	border-radius:  2px !important;
+	background-color: #ffffff !important
+}
 .label-custom{
 	font-size: 1.1rem ;
 	color: #707684;
@@ -737,6 +746,19 @@ body {
 		grid-template-columns: 1fr !important;
 	}
 .card-img img, .card-social img { width : 30px; height: 30px;}
+.gtb{
+	justify-content: center !important;
+}
+.gta{
+	width: 100% !important;
+	padding: 1.5% 2% !important;
+}
+.z-index {
+	z-index: 2000000000000 !important;
+}
+.z-index .swal2-popup{
+	z-index: 2000000000000 !important;
+}
 
 }
 

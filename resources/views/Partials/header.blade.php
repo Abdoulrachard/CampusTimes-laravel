@@ -20,7 +20,7 @@
 		<div class="profil-info d-flex  " style="">
 			<div class="d-flex justify-content-center   " style="flex-direction: column;margin:auto;">
 				<span><h6>{{ Auth::user()->lastname }} {{ Auth::user()->firstname }}</h6></span>
-				<span class="small align-self-center" style="color: blueviolet">
+				<span class="small " style="color: blueviolet">
 					{{ Auth::user()->role->label }}
 				</span>
 			</div>

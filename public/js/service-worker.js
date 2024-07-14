@@ -11,6 +11,7 @@ self.addEventListener('install', function(event) {
             '/public/css/timetablejs.css',
             '/public/js/timetable.js',
             '/public/js/timetables.js',
+            '/public/js/app.js',
             '/public/storage/image/books.svg',
             '/public/storage/image/dash-icon-01.svg',
             '/public/storage/image/dash-icon-03.svg',

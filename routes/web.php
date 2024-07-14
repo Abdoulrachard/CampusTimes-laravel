@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\PasswordController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisterController ;
 use App\Http\Controllers\ClassroomController;
@@ -46,4 +47,9 @@ Route::prefix('admin')->middleware(['auth','studentDenied'])->group(function () 
         Route::get('student', [StudentController::class, 'index'])->name('student.index');
         Route::post('student/{student}', [StudentController::class, 'blocked'])->name('student.blocked');
         Route::view('/dashboard', 'admin.dashboard')->name('admin.dashboard');
+});
+Route::middleware('auth')->group(function(){
+        Route::get('profile/edit', [PasswordController::class, 'edit'])->name('profile.edit');
+        Route::put('profile/update', [PasswordController::class, 'update'])->name('profile.update');
+        Route::put('profile/password', [PasswordController::class, 'updatePass'])->name('profile.password.update');
 });

@@ -1,4 +1,4 @@
-@extends('Base.basee')
+@extends('Base.base')
  @section('title') Dashboard @endsection
 
  @section('content')

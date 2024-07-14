@@ -2,10 +2,25 @@
  @section('title') Profile @endsection
 
  @section('content') 
- <form action="{{ route('profile.update')}}" method="post" class="p-4 margin-update">
+ <form action="{{ route('profile.update')}}" method="post" class="p-4 margin-update" enctype="multipart/form-data">
     @method('PUT')
     @csrf
-        
+    <div class="text-center">
+    <label for="profil">
+        <div class="  mb-4  image-ctn" title="Changer de photo" style="width: 150px; height: 150px; cursor: pointer;">
+            <img src="{{ auth()->user()->storageUrl() }}" alt="logo teacher" class="w-100 h-100 border border-3 rouned-3" style="border-radius: 150px;">
+        </div>
+        <input type="file" id="profil" class="d-none" name="profil">
+                    @error('profil')
+                            <div style="color:#dc3545">
+                                {{ $message }}
+                            </div>
+                    @enderror
+    </label>
+</div>
+            <div class="">
+                <h6 class="text-muted my-3 "> <i class='bx bxs-user-check' style="font-size: 22px;" ></i> Compte : <span style="color: #3d5ee1">{{ auth()->user()->role->label }}</span></h6>
+            </div>
             <div class="form-group row">
                 <div class="col-md-6">
                     <label for="lastname" class=" form-label w-100 mb-1 text-muted position-relative">Lastname
@@ -53,6 +68,7 @@
                 <button class="btn btn-primary gta py-1 px-5 rounded-1 ">Modifier</button>
             </div>
 </form>
+<hr>
  <form action="{{ route('profile.password.update')}}" method="post" class="p-4 margin-update">
     @method('PUT')
     @csrf

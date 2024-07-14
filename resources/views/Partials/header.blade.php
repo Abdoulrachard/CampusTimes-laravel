@@ -12,10 +12,10 @@
 	<div style="" class="profil-container d-flex align-items-center   mx-2    " >
 		<a href="#" class="notification mx-4">
 			<i class='bx bxs-bell' ></i>
-			<span class="num">1</span>
+			<span class="num">0</span>
 		</a>
-		<a href="#" class="profile" style="margin-right:15px;">
-			<img src="{{ Auth::user()->profil() }}" alt="">
+		<a href="{{ route('profile.edit')}}" class="profile" style="margin-right:15px;">
+			<img src="{{ auth()->user()->StorageUrl() }}" alt="">
 		</a>
 		<div class="profil-info d-flex  " style="">
 			<div class="d-flex justify-content-center   " style="flex-direction: column;margin:auto;">

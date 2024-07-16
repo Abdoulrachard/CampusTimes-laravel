@@ -7,12 +7,6 @@
     <meta name="description" content="Le projet CAMPUSTIMES est une application capable de gérer la planification des emplois du temps pour les administrateurs, étudiants et professeurs.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="LAWINGNI Abdoul Rachard">
-    !-- Open Graph metadata -->
-    <meta property="og:title" content="CAMPUSTIMES - Gestion de la Planification des Emplois du Temps">
-    <meta property="og:description" content="Le projet CAMPUSTIMES est une application capable de gérer la planification des emplois du temps pour les administrateurs, étudiants et professeurs.">
-    <meta property="og:image" content="">
-    <meta property="og:url" content="https://campustimes.cche-ch.com/">
-    <meta property="og:type" content="website">
     <meta name="theme-color" content="#3c91e6">
     <!-- Safari on iOS -->
     <meta name="apple-mobile-web-app-status-bar-style" content="default">

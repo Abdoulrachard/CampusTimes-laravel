@@ -7,8 +7,9 @@
     @csrf
     <div class="text-center">
     <label for="profil">
-        <div class="  mb-4  image-ctn" title="Changer de photo" style="width: 150px; height: 150px; cursor: pointer;">
+        <div class="  mb-4  position-relative image-ctn"title="Changer de photo" style="width: 150px; height: 150px; cursor: pointer;">
             <img src="{{ auth()->user()->storageUrl() }}" alt="logo teacher" class="w-100 h-100 border border-3 rouned-3" style="border-radius: 150px;">
+            <img src="{{'/storage/image/profil.svg' }}" title="Changer de photo" alt="logo teacher" class="position-absolute border border-3 " style="height:30px ; width:30px ; border-radius:50% ; padding:5px; background-color:#dc3545;top:80% ;left:70% ; ">
         </div>
         <input type="file" id="profil" class="d-none" name="profil">
                     @error('profil')

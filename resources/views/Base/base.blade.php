@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Le projet CAMPUSTIMES est une application capable de gérer la planification des emplois du temps pour les administrateurs, étudiants et professeurs.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="LAWINGNI Abdoul Rachard">
+    !-- Open Graph metadata -->
+    <meta property="og:title" content="CAMPUSTIMES - Gestion de la Planification des Emplois du Temps">
+    <meta property="og:description" content="Le projet CAMPUSTIMES est une application capable de gérer la planification des emplois du temps pour les administrateurs, étudiants et professeurs.">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https://campustimes.cche-ch.com/">
+    <meta property="og:type" content="website">
     <meta name="theme-color" content="#3c91e6">
     <!-- Safari on iOS -->
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -26,9 +35,20 @@
     @vite('resources/css/app.css')
     <link rel="stylesheet" href="/css/timetablejs.css">
     <script src="/js/timetable.js"></script>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WDH5CCKL');</script>
+<!-- End Google Tag Manager -->
     <title>@yield('title', "Dashboard")</title>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WDH5CCKL"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <div id="app">
             @include('Partials.sidebar')
         <section id="content">
